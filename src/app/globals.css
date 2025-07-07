@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-base {
+    @apply w-full px-4 py-2 text-base font-medium font-sans text-[#2d2d2d]
+      bg-white border-[1.5px] border-slate-300 rounded-[10px] outline-none
+      box-border transition-colors duration-200 ease-in-out
+      focus:border-blue-500 focus:shadow-[0_0_6px_2px_rgba(59,130,246,0.4)]
+      disabled:bg-slate-100 disabled:text-slate-400
+      disabled:border-slate-300 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
